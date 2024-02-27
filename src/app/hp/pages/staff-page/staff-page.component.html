@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Personal</h1>
+
+  <ng-template #loading>
+    <div class="alert alert-info text-center">
+      Espere por favor
+      <img src="assets/loader.svg" alt="" class="loader">
+    </div>
+  </ng-template>
+
+  <hp-character-table *ngIf="staff.length > 0; else loading" [characters]="staff" class="animate__animated animate__fadeIn animate__slow"></hp-character-table>
+</div>

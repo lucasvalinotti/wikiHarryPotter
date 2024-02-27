@@ -1,0 +1,19 @@
+<hr>
+<table class="table table-hover">
+  <thead>
+    <th class="text-center">#</th>
+    <th>Nombre</th>
+    <th>Casa</th>
+    <th>Nacimiento</th>
+    <th> </th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let character of characters; let i = index">
+      <td class="text-center">{{ i + 1}}</td>
+      <td>{{character.name}}</td>
+      <td>{{character.house || 'S/D'}}</td>
+      <td>{{character.dateOfBirth || 'S/D'}}</td>
+      <td><a [routerLink]="['/characters', character.id]">Ver más</a></td>
+    </tr>
+  </tbody>
+</table>

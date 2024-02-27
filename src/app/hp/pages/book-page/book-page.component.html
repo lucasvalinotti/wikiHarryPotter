@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>{{book?.title}}</h2>
+    </div>
+    <hr>
+    <div class="col-md-4 d-flex flex-column justify-content-center">
+      <h2>Portada</h2>
+      <img [src]="book?.cover" alt="Portada del libro">
+    </div>
+    <div class="col">
+      <h2>Información</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Páginas: {{book?.pages}}</li>
+        <li class="list-group-item">Publicación: {{book?.releaseDate}}</li>
+        <li class="list-group-item">Descripción: {{book?.description}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+

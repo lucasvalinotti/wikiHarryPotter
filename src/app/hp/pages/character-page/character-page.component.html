@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>{{character?.name}}</h2>
+    </div>
+    <hr>
+    <div class="col-md-4 d-flex flex-column justify-content-center">
+      <h2>Foto</h2>
+      <img [src]="character?.image || 'assets/silueta.jpeg'" alt="Portada del libro">
+    </div>
+    <div class="col">
+      <h2>Información</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Casa: <strong [ngClass]="{
+          'gryffindor': character?.house === 'Gryffindor',
+          'slytherin': character?.house === 'Slytherin',
+          'hufflepuf': character?.house === 'Hufflepuff',
+          'ravenclaw': character?.house === 'Ravenclaw'
+        }"
+        >{{character?.house || 'S/D'}}</strong></li>
+        <li class="list-group-item">Nacimiento: <strong>{{character?.dateOfBirth || 'S/D'}}</strong></li>
+        <li class="list-group-item">Sangre: <strong>{{character?.ancestry || 'S/D'}}</strong></li>
+        <li class="list-group-item">Patronus: <strong>{{character?.patronus || 'S/D'}}</strong></li>
+        <li class="list-group-item">Varita: <br>
+          Madera:  <strong>{{character?.wand?.wood}}</strong> <br>
+          Núcleo: <strong>{{character?.wand?.core || 'S/D'}}</strong> <br>
+          Longitud: <strong>{{character?.wand?.length || 'S/D'}} cm.</strong>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

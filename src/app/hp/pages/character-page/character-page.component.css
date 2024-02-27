@@ -1,0 +1,21 @@
+img{
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gryffindor{
+  color: #BC2328;
+}
+
+.slytherin {
+  color: #017753;
+}
+
+.hufflepuf {
+  color: #F7B71B;
+}
+
+.ravenclaw{
+  color: #00529B;
+}

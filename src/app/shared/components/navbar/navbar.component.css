@@ -1,0 +1,11 @@
+.logo{
+  height: 50px;
+}
+
+.activePage{
+  text-decoration:underline;
+}
+
+a:hover{
+  cursor: pointer;
+}

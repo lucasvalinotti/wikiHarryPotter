@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Hechizos</h1>
+  <hr>
+  <ng-template #loading>
+    <div class="alert alert-info text-center">
+      Espere por favor
+      <img src="assets/loader.svg" alt="" class="loader">
+    </div>
+  </ng-template>
+
+  <table *ngIf="spells.length > 0;else loading" class="table table-hover animate__animated animate__fadeIn animate__slow">
+    <thead>
+      <th class="text-center">#</th>
+      <th>Nombre</th>
+      <th>Accion</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let spell of spells; let i = index">
+        <td class="text-center">{{i + 1}}</td>
+        <td>{{spell.spell}}</td>
+        <td>{{spell.use || 'S/D'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
